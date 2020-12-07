@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>幸运大转盘</title>
+      <style>
+        /* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+        .wrapper {
+            margin: 100px auto;
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            background-color: #c0381f;
+            box-shadow: #000000 0px 0px 10px;
+            border-radius: 50%;
+        }
+        .panel {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-color: #b7b7b7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pointer {
+            position: relative;
+            height: 30px;
+            width: 30px;
+            padding: 6px;
+            color: #fff899;
+            line-height: 15px;
+            font-size: 12px;
+            text-align: center;
+            background-color: #dc5b5b;
+            border-radius: 50%;
+            border: 1px solid #c0381f;
+        }
+        .pointer::after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: -24px;
+            border-width: 12px 6px;
+            border-style: solid;
+            border-color: transparent;
+            border-bottom-color: #c0381f;
+        }
+        .sector {
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            border-radius: 0px 100px 100px 0;
+            overflow: hidden;
+            left: 100px;
+            top: 0px;
+            transform-origin: left center;
+        }
+        .sector:nth-child(1) {
+            transform: rotate(-18deg);
+        }
+        .sector:nth-child(2) {
+            transform: rotate(18deg);
+        }
+        .sector:nth-child(3) {
+            transform: rotate(54deg);
+        }
+        .sector:nth-child(4) {
+            transform: rotate(90deg);
+        }
+        .sector:nth-child(5) {
+            transform: rotate(126deg);
+        }
+        .sector:nth-child(6) {
+            transform: rotate(162deg);
+        }
+        .sector:nth-child(7) {
+            transform: rotate(198deg);
+        }
+        .sector:nth-child(8) {
+            transform: rotate(234deg);
+        }
+        .sector:nth-child(9) {
+            transform: rotate(270deg);
+        }
+        .sector:nth-child(10) {
+            transform: rotate(306deg);
+        } 
+        .sector:nth-child(2n+1) .sector-inner {
+            background: #fef6e0;
+        }
+        .sector:nth-child(2n) .sector-inner {
+            background: #ffffff;
+        }
+         .sector-inner {
+            text-align: center;
+            width: 40px;
+            height: 100%;
+            padding: 5px 3px 0 57px;
+            transform: translateX(-100px) rotate(36deg);
+            transform-origin: right center;
+        }
+        .sector-inner span {
+            display: block;
+            transform-origin: center;
+            transform: rotate(-19deg);
+            padding: 0 1px;
+            color: #d46854;
+        } 
+    </style>
+    </head>
+    <body>
+      <div class="wrapper">
+        <div class="panel">
+            <div class="sector">
+                <div class="sector-inner">
+                  <span>test0</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                  <span>test1</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test2</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test3</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test4</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test5</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test6</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test7</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test8</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>test9</span>
+                </div>
+            </div>
+
+          <div class="pointer">
+            开始抽奖
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
